@@ -1,5 +1,5 @@
 {
-    "name": "matthias/bagisto-auto-exchange",
+    "name": "matthiasklaasse/bagisto-auto-exchange",
     "description": "Automatically add all currencies and exchange rates to your Bagisto website",
     "autoload": {
         "psr-4": {
