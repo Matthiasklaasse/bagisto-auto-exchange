@@ -19,7 +19,7 @@ class UpdateCurrencies extends Command
         $baseCurrency = core()->getBaseCurrencyCode();
 
         if (empty($apiKey)) {
-            $this->error('Set your API key in .env: EXCHANGERATE_API_KEY');
+            $this->error('Set your API key in .env: EXCHANGERATE_API_KEY get your key at https://exchangerate-api.com/');
             return 1;
         }
 
@@ -37,7 +37,7 @@ class UpdateCurrencies extends Command
 
             $details = $this->getCurrencyDetails($code);
             $currency = DB::table('currencies')->where('code', $code)->first();
-			
+
             if(empty($details)){
                 continue;
             }
@@ -89,7 +89,6 @@ class UpdateCurrencies extends Command
     
         foreach ($currencies as $currency) {
             if ($currency['code'] === $code) {
-                dump($currency);
                 return $currency;
             }
         }
