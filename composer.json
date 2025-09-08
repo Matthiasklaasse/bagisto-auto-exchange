@@ -1,0 +1,23 @@
+{
+    "name": "matthias/bagisto-auto-exchange",
+    "description": "Automatically add all currencies and exchange rates to your Bagisto website",
+    "autoload": {
+        "psr-4": {
+            "Matthias\\BagistoAutoExchange\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Matthias\\BagistoAutoExchange\\BagistoAutoExchangeServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Matthias",
+            "email": "matthiasklaasse@gmail.com"
+        }
+    ],
+    "require": {}
+}
