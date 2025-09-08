@@ -37,10 +37,7 @@ class UpdateCurrencies extends Command
 
             $details = $this->getCurrencyDetails($code);
             $currency = DB::table('currencies')->where('code', $code)->first();
-            if ($currency) {
-                DB::table('currencies')->where('code', $code)->delete();
-                $currency = false;
-            }
+			
             if(empty($details)){
                 continue;
             }
